@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from MovieRecommendationAPI.MovieLens_reco_content import RecoContent
+from MovieLens_reco_content import RecoContent
 
 app = Flask(__name__)
 recoContent = RecoContent()

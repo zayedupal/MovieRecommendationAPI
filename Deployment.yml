@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movierecoapi
+  labels:
+    app: movierecoapi
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: movierecoapi
+  template:
+    metadata:
+      labels:
+        app: movierecoapi
+    spec:
+      containers:
+      - name: auto
+        image: gcr.io/main-cedar-265619/movierecoapi
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
